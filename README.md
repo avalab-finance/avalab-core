@@ -1,7 +1,7 @@
 # OpenSwap v2 contracts
 
 
-## OpenSwap token:
+## AVALab Token:
 
 Differences:
 -bridge included
@@ -13,7 +13,7 @@ Differences:
 
 ## Bridge
 Can be closed by dev (to ensure full seperation from V1)
-address has to be set in openswap token,
+address has to be set in AVALab token,
 
 
 ## VoteToken:

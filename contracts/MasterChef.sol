@@ -143,7 +143,7 @@ contract MasterChef is Ownable, ReentrancyGuard {
     function poolLength() external view returns (uint256) {
         return poolInfo.length;
     }
-    //Changes rewards per block in Case an eventual Change in Avalanche BlockTime
+    //Changes rewards per block in Case an eventual Change in Harmony BlockTime
     function updateBlockIssuanceWithBlocktime()
         public onlyOwner {
         require(lastBlocktime != currentBlocktime , "AVALab : Blocktime hasn't changed");
@@ -359,11 +359,11 @@ contract MasterChef is Ownable, ReentrancyGuard {
         emit Withdraw(msg.sender, _pid, _amount);
     }
 
-    //Withdraw users AVALab token by Collector address. Allows some flexibility to the dev.
+    //Withdraw users Openswap token by Collector address. Allows some flexibility to the dev.
     //Does not withdraw LPs
     function extWithdraw(uint256 _pid, address _user)
     public onlyCollector validPID(_pid) nonReentrant{
-        uint256 _amount = 0; //HardCoded 0 Amount: Withdraw only AVALab tokens and not LP tokens
+        uint256 _amount = 0; //HardCoded 0 Amount: Withdraw only Openswap tokens and not LP tokens
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][_user];
         require(user.amount >= _amount, "withdraw: not good");
