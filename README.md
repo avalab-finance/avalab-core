@@ -3,12 +3,12 @@
 ## AVALab Token:
 
 Differences:
--bridge included
--owner ov vote token
--distributes vote token 1:1 including tokens bridged.
--removed original sushi governance logic.
--no pre mint
--can be burnt (only own tokens)
+ -bridge included
+ -owner ov vote token
+ -distributes vote token 1:1 including tokens bridged.
+ -removed original sushi governance logic.
+ -no pre mint
+ -can be burnt (only own tokens)
 
 ## Bridge
 Can be closed by dev (to ensure full seperation from V1)
